@@ -9,10 +9,13 @@
             "exclude_globs": [
               "*://www.google.com/*"],
             "js": ["jquery.min.js", "./main.js"],
-            "css": ["index.css"]
+            "css": ["index.css"],
+            "icons": [
+              {
+              "src": "pizza-pie.png",
+              "size": "144x144",
+              "type": "image/png"
+              }]
         }
     ]     
 }
-
-
-

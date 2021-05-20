@@ -1,4 +1,4 @@
-const foundID = false; //boolean flag to determine if recipe ID found, if so, reload page
+// const foundID = false; //boolean flag to determine if recipe ID found, if so, reload page
 
 // can also navigate for the jump to recipe button
 // they used 'a' tags with an href link that goes straight to the receipe
@@ -14,14 +14,10 @@ const aTags = body.querySelectorAll('a');     // returns node list
 console.log(aTags);
 //else enter forEach loop
 aTags.forEach(a => {
-  //if(a.getAttribute('href')){
     if(a.getAttribute('href') !== null && a.getAttribute('href').includes('print')){
     printURL = a.getAttribute('href')
-    // console.log('im inside if statement');
     }
   })
-
-
 
   // if window's current location !== printUrl =>
   if(window.location.href !== printURL){
@@ -29,6 +25,37 @@ aTags.forEach(a => {
     location.assign(printURL);
   }
   
+
+
+
+
+
+
+
+
+
+
+// // const regex = /carrot/$;
+// const spanTags = body.querySelectorAll('span');
+// const hTwoTags = body.querySelectorAll('h2');
+// spanTags.forEach(span => {
+//   console.log(span)
+//   if(span.innerHTML.includes('carrots') || span.innerHTML.includes('carrot') ){
+//     span.innerHTML.replace('carrot', 'see, we got veggies in here; therefore, this cake\'s healthy pog');
+//   }
+// })
+
+// hTwoTags.forEach(header => {
+//   // console.log(header.innerHTML)
+//   // console.log(header.innerText)
+//   console.log(header.innerHTML)
+//   if(header.innerHTML.includes('carrots') || header.innerHTML.includes('Carrot') ){
+//     console.log('im inside the if')
+//     const newHeader = header.innerHTML.replace(/carrot/i, 'Carrot --- see, we got veggies in here; therefore, this cake\'s healthy pog --- ');
+//     console.log(newHeader)
+//     // header.appendChild(newHeader);
+//   }
+// })
 
 
 
